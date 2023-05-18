@@ -36,10 +36,9 @@ class Auth extends CI_Controller
             $this->session->set_flashdata('msg_class', 'alert-success');
             redirect(site_url('dashboard'));
         } else {
-            $data['login'] = "not_salah";
             $this->session->set_flashdata('msg', "Pastikan username dan password anda benar!.");
             $this->session->set_flashdata('msg_class', 'alert-danger');
-            $this->load->view('admin/content/login', $data);
+            redirect(site_url('administrator/login'));
         }
     }
 
