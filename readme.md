@@ -5,5 +5,6 @@
 4. Rubah bagian $config['base_url'] = 'http://skripsi-roselina.test/';<br>
 5. bagian http://skripsi-roselina.test/ sesuaikan dengan url masing masing<br>
 
-<h2>CONTOH</h2><br>
-Jika menggunakan XAMPP biasanya link http://localhost/nama_folder_project
+<h2>CONTOH</h2>
+Jika menggunakan XAMPP biasanya link http://localhost/nama_folder_project<br>
+jadi dirubah menjadi $config['base_url'] = 'http://localhost/skripsi-roselina/';
