@@ -90,7 +90,6 @@
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
                     </div>
-
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li><a class="<?php if ($this->uri->uri_string() == "") {
@@ -105,20 +104,18 @@
                             <li><a class="<?php if ($this->uri->uri_string() == "Contact") {
                                                 echo "active";
                                             } ?>" data-scroll href="<?= base_url('Contact'); ?>">Contact</a></li>
+                            <li><a class="<?php if ($this->uri->uri_string() == "administrator/login") {
+                                                echo "active";
+                                            } ?>" data-scroll href="<?= base_url('administrator/login'); ?>">Login</a></li>
                         </ul>
                     </div>
                 </nav>
-                <div class="serch-bar">
-                    <div id="custom-search-input">
-                        <div class="input-group col-md-12">
-                            <input type="text" class="form-control input-lg" placeholder="Search" />
-                            <span class="input-group-btn">
-                                <button class="btn btn-info btn-lg" type="button">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </div>
+                <div class="serch-bar navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="btn btn-info btn-lg" data-scroll href="<?= site_url('administrator/login'); ?>">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
