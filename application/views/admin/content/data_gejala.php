@@ -5,10 +5,10 @@
             <div class="card-body">
                 <div class="d-sm-flex d-block align-items-center justify-content-between mb-9 alert alert-success">
                     <div class="mb-3 mb-sm-0">
-                        <h5 class="card-title fw-semibold">Data Penyakit</h5>
+                        <h5 class="card-title fw-semibold">Data gejala</h5>
                     </div>
                     <div>
-                        <a href="" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
+                        <a href="<?= site_url('data-gejala/insert') ?>" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -31,8 +31,8 @@
                                         <td><?= $item->kode_gejala; ?></td>
                                         <td><?= $item->gejala; ?></td>
                                         <td>
-                                            <a href="" class="btn btn-sm btn-success m-1">Edit</a>
-                                            <a href="" class="btn btn-sm btn-danger m-1">Delete</a>
+                                            <a href="<?= site_url('data-gejala/edit/' . $item->id_gejala) ?>" class="btn btn-sm btn-success m-1">Edit</a>
+                                            <a href="<?= site_url('data-gejala/delete/' . $item->id_gejala) ?>" class="btn btn-sm btn-danger m-1">Delete</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

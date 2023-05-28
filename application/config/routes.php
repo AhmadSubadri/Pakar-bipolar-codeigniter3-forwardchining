@@ -18,6 +18,10 @@ $route['data-penyakit/delete/(:any)'] = 'admin/data_penyakit/delete/$1';
 
 
 $route['data-gejala'] = 'admin/data_gejala';
+$route['data-gejala/insert'] = 'admin/data_gejala/insert';
+$route['data-gejala/edit/(:any)'] = 'admin/data_gejala/edit/$1';
+$route['data-gejala/delete/(:any)'] = 'admin/data_gejala/delete/$1';
+
 $route['data-riwayat'] = 'admin/data_riwayat';
 $route['data-rule'] = 'admin/data_rule';
 $route['data-pasien'] = 'admin/data_pasien';
