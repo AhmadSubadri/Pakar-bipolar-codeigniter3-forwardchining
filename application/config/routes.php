@@ -10,7 +10,13 @@ $route['administrator/login/process'] = 'admin/auth/process_login';
 $route['administrator/logout'] = 'admin/auth/logout';
 
 $route['dashboard'] = 'admin/dashboard';
+
 $route['data-penyakit'] = 'admin/data_penyakit';
+$route['data-penyakit/insert'] = 'admin/data_penyakit/insert';
+$route['data-penyakit/edit/(:any)'] = 'admin/data_penyakit/edit/$1';
+$route['data-penyakit/delete/(:any)'] = 'admin/data_penyakit/delete/$1';
+
+
 $route['data-gejala'] = 'admin/data_gejala';
 $route['data-riwayat'] = 'admin/data_riwayat';
 $route['data-rule'] = 'admin/data_rule';

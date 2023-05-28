@@ -8,7 +8,7 @@
                         <h5 class="card-title fw-semibold">Data Penyakit</h5>
                     </div>
                     <div>
-                        <a href="" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
+                        <a href="<?= site_url('data-penyakit/insert'); ?>" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -33,8 +33,8 @@
                                         <td><?= $item->nama_penyakit; ?></td>
                                         <td><?= $item->penanganan; ?></td>
                                         <td>
-                                            <a href="" class="btn btn-sm btn-success m-1">Edit</a>
-                                            <a href="" class="btn btn-sm btn-danger m-1">Delete</a>
+                                            <a href="<?= site_url('data-penyakit/edit/' . $item->id_penyakit) ?>" class="btn btn-sm btn-success m-1">Edit</a>
+                                            <a href="<?= site_url('data-penyakit/delete/' . $item->id_penyakit) ?>" class="btn btn-sm btn-danger m-1">Delete</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
