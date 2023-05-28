@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller
+class Data_pasien extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
         $this->load->model('Login_model', 'm_login');
-        $this->load->model('Dashboard_model', 'm_dashboard');
+        $this->load->model('Pasien_model', 'm_pasien');
         if (!$this->m_login->CurrentUser()) {
             $this->session->set_flashdata('msg', "Pastikan anda sudah login akun!.");
             $this->session->set_flashdata('msg_class', 'alert-danger');
@@ -19,13 +19,10 @@ class Dashboard extends CI_Controller
     public function index()
     {
         $data = [
-            'penyakit' => $this->m_dashboard->index(),
-            'gejala' => $this->m_dashboard->Data_Gejala(),
-            'riwayat' => $this->m_dashboard->Data_Rowayat(),
-            'pasien' => $this->m_dashboard->Data_Pasien(),
+            'data' => $this->m_pasien->index()
         ];
         $this->load->view('admin/partials/head', $data);
-        $this->load->view('admin/content/dashboard', $data);
+        $this->load->view('admin/content/data_pasien', $data);
         $this->load->view('admin/partials/footer', $data);
     }
 }

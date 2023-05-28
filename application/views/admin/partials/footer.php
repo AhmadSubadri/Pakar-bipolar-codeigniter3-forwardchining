@@ -11,6 +11,10 @@
 <script src="<?php echo base_url() ?>assets/dashboard/libs/apexcharts/dist/apexcharts.min.js"></script>
 <script src="<?php echo base_url() ?>assets/dashboard/libs/simplebar/dist/simplebar.js"></script>
 <script src="<?php echo base_url() ?>assets/dashboard/js/dashboard.js"></script>
-</body>
-
-</html>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    });
+</script>

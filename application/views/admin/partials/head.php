@@ -7,6 +7,8 @@
     <title>Sistem Pakar Pinilih - </title>
     <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>assets/images/fevicon.ico.png" />
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/dashboard/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+
 </head>
 
 <body>

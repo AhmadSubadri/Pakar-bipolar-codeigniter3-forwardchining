@@ -1,59 +1,6 @@
-<div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url(<?= base_url('assets/images/slider-bg.png'); ?>);">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="text-contant">
-                    <h2>
-                        <span class="center"><span class="icon"><img src="<?= base_url(); ?>assets/images/icon-logo.png" alt="#" /></span></span>
-                        <a href="" class="typewrite" data-period="2000" data-type='[ "Selamat datang di Sistem Pakar", "Diagnosa Penyakit Bipolar Argodadi", "We are Expert!" ]'>
-                            <span class="wrap"></span>
-                        </a>
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="time-table" class="time-table-section">
-    <div class="container">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="row">
-                <div class="service-time one" style="background:#2895f1;">
-                    <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
-                    <h3>Emergency Case</h3>
-                    <p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et quas mole.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="row">
-                <div class="service-time middle" style="background:#0071d1;">
-                    <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-                    <h3>Working Hours</h3>
-                    <div class="time-table-section">
-                        <ul>
-                            <li><span class="left">Monday - Friday</span><span class="right">8.00 – 18.00</span></li>
-                            <li><span class="left">Saturday</span><span class="right">8.00 – 16.00</span></li>
-                            <li><span class="left">Sunday</span><span class="right">8.00 – 13.00</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="row">
-                <div class="service-time three" style="background:#0060b1;">
-                    <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
-                    <h3>Clinic Timetable</h3>
-                    <p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et quas mole.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div id="home" class="parallax wow fadeIn" data-stellar-background-ratio="0.4"></div>
 <div id="about" class="section wow fadeIn">
     <div class="container">
-        <!-- end title -->
         <div class="row">
             <div class="col-md-8">
                 <div class="heading">
@@ -134,9 +81,46 @@
             </div>
             <!-- end col -->
             <div class="col-md-4">
-                <div class="post-media wow fadeIn">
-                    <img src="<?= base_url(); ?>assets/images/about_03.jpg" alt="" class="img-responsive">
-                    <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
+                <div class="appointment-form">
+                    <h3 class="text-center"><span>+</span> Maps</h3>
+                    <div class="form">
+                        <div class="post-media wow fadeIn">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7905.544726390774!2d110.24935337770997!3d-7.813904399999981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af9e9d315a8f5%3A0x73bd6940df674fcd!2sKantor%20Kapanewon%20Sedayu!5e0!3m2!1sid!2sid!4v1684077167052!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="appointment-form">
+                    <h3 class="text-center"><span>+</span> Galeri</h3>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-widget">
+                                <div class="post-media wow fadeIn">
+                                    <a href="<?= base_url(); ?>assets/images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                    <img src="<?= base_url(); ?>assets/images/clinic_01.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-widget">
+                                <div class="post-media wow fadeIn">
+                                    <a href="<?= base_url(); ?>assets/images/clinic_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                    <img src="<?= base_url(); ?>assets/images/clinic_02.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <!-- end service -->
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-widget">
+                                <div class="post-media wow fadeIn">
+                                    <a href="<?= base_url(); ?>assets/images/clinic_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                    <img src="<?= base_url(); ?>assets/images/clinic_03.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <!-- end service -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
