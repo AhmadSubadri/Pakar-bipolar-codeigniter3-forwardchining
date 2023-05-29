@@ -8,7 +8,7 @@
                         <h5 class="card-title fw-semibold">Data Admin</h5>
                     </div>
                     <div>
-                        <a href="" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
+                        <a href="<?= site_url('data-admin/insert') ?>" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -31,8 +31,8 @@
                                         <td><?= $item->username; ?></td>
                                         <td><?= $item->password; ?></td>
                                         <td>
-                                            <a href="" class="btn btn-sm btn-success m-1">Edit</a>
-                                            <a href="" class="btn btn-sm btn-danger m-1">Delete</a>
+                                            <a href="<?= site_url('data-admin/edit/' . $item->id_admin) ?>" class="btn btn-sm btn-success m-1">Edit</a>
+                                            <a href="<?= site_url('data-admin/delete/' . $item->id_admin) ?>" class="btn btn-sm btn-danger m-1">Delete</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

@@ -25,4 +25,68 @@ class Data_admin extends CI_Controller
         $this->load->view('admin/content/data_admin', $data);
         $this->load->view('admin/partials/footer', $data);
     }
+
+    public function insert()
+    {
+        if ($this->input->method() === 'post') {
+            $this->form_validation->set_rules($this->m_admin->rules());
+            if ($this->form_validation->run() == FALSE) {
+                $this->load->view('admin/partials/head');
+                $this->load->view('admin/content/data_admin_add');
+                $this->load->view('admin/partials/footer');
+            } else {
+                $data = [
+                    'username' => $this->input->post('username'),
+                    'password' => md5($this->input->post('password')),
+                ];
+                $this->m_admin->insert($data);
+                $this->session->set_flashdata('msg', "Insert data admin Success!.");
+                $this->session->set_flashdata('msg_class', 'alert-success');
+                redirect('data-admin');
+            }
+        } else {
+            $this->load->view('admin/partials/head');
+            $this->load->view('admin/content/data_admin_add');
+            $this->load->view('admin/partials/footer');
+        }
+    }
+
+    public function edit($id)
+    {
+        if ($this->input->method() === 'post') {
+            $this->form_validation->set_rules($this->m_admin->rules());
+            if ($this->form_validation->run() == FALSE) {
+                $data1 = [
+                    'data' => $this->m_admin->get_data($id)
+                ];
+                $this->load->view('admin/partials/head', $data1);
+                $this->load->view('admin/content/data_admin_edit', $data1);
+                $this->load->view('admin/partials/footer', $data1);
+            } else {
+                $data = [
+                    'username' => $this->input->post('username'),
+                    'password' => md5($this->input->post('password')),
+                ];
+                $this->m_admin->update($data, $id);
+                $this->session->set_flashdata('msg', "Update data admin Success!.");
+                $this->session->set_flashdata('msg_class', 'alert-success');
+                redirect('data-admin');
+            }
+        } else {
+            $data1 = [
+                'data' => $this->m_admin->get_data($id)
+            ];
+            $this->load->view('admin/partials/head', $data1);
+            $this->load->view('admin/content/data_admin_edit', $data1);
+            $this->load->view('admin/partials/footer', $data1);
+        }
+    }
+
+    public function delete($id)
+    {
+        $this->session->set_flashdata('msg', "Delete data admin Success!.");
+        $this->session->set_flashdata('msg_class', 'alert-danger');
+        $this->m_admin->delete($id);
+        redirect('data-admin');
+    }
 }

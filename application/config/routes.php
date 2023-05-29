@@ -22,10 +22,18 @@ $route['data-gejala/insert'] = 'admin/data_gejala/insert';
 $route['data-gejala/edit/(:any)'] = 'admin/data_gejala/edit/$1';
 $route['data-gejala/delete/(:any)'] = 'admin/data_gejala/delete/$1';
 
-$route['data-riwayat'] = 'admin/data_riwayat';
 $route['data-rule'] = 'admin/data_rule';
+$route['data-rule/insert'] = 'admin/data_rule/insert';
+$route['data-rule/edit/(:any)'] = 'admin/data_rule/edit/$1';
+$route['data-rule/delete/(:any)'] = 'admin/data_rule/delete/$1';
+
+$route['data-riwayat'] = 'admin/data_riwayat';
 $route['data-pasien'] = 'admin/data_pasien';
+
 $route['data-admin'] = 'admin/data_admin';
+$route['data-admin/insert'] = 'admin/data_admin/insert';
+$route['data-admin/edit/(:any)'] = 'admin/data_admin/edit/$1';
+$route['data-admin/delete/(:any)'] = 'admin/data_admin/delete/$1';
 
 
 $route['berita'] = 'Berita';

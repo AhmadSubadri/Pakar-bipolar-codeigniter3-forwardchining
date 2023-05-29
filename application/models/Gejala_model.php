@@ -26,7 +26,7 @@ class Gejala_model extends CI_Model
 
     public function index()
     {
-        $this->db->select('*')->from('tb_gejala');
+        $this->db->select('*')->from('tb_gejala')->order_by('kode_gejala', 'ASC');
         $query = $this->db->get();
         return $query;
     }
