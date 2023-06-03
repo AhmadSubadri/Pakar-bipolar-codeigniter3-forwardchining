@@ -8,7 +8,7 @@
                         <h5 class="card-title fw-semibold">Data Rule</h5>
                     </div>
                     <div>
-                        <a href="" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
+                        <a href="<?= site_url('data-rule/insert') ?>" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -29,12 +29,12 @@
                                 foreach ($data->result() as $item) : ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
-                                        <td><?= $item->nama; ?><br><?= $item->jenis_kelamin; ?></td>
-                                        <td><?= $item->umur; ?></td>
-                                        <td><?= $item->umur; ?></td>
+                                        <td><?= $item->kode_rule; ?></td>
+                                        <td><?= $item->kode_penyakit; ?> - <?= $item->nama_penyakit; ?></td>
+                                        <td><?= $item->kode_gejala; ?></td>
                                         <td>
-                                            <a href="" class="btn btn-sm btn-success m-1">Edit</a>
-                                            <a href="" class="btn btn-sm btn-danger m-1">Delete</a>
+                                            <a href="<?= site_url('data-rule/edit/' . $item->id_rule) ?>" class="btn btn-sm btn-success m-1">Edit</a>
+                                            <a href="<?= site_url('data-rule/delete/' . $item->id_rule) ?>" class="btn btn-sm btn-danger m-1">Delete</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

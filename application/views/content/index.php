@@ -94,6 +94,7 @@
                 <div class="appointment-form">
                     <h3 class="text-center"><span>+</span> Galeri</h3>
                     <div class="row">
+                        <hr class="hr1">
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="service-widget">
                                 <div class="post-media wow fadeIn">
@@ -109,7 +110,6 @@
                                     <img src="<?= base_url(); ?>assets/images/clinic_02.jpg" alt="" class="img-responsive">
                                 </div>
                             </div>
-                            <!-- end service -->
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="service-widget">
@@ -118,14 +118,29 @@
                                     <img src="<?= base_url(); ?>assets/images/clinic_03.jpg" alt="" class="img-responsive">
                                 </div>
                             </div>
-                            <!-- end service -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="appointment-form">
+                    <h3 class="text-center"><span>+</span> Media Sosial</h3>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-6 col-xs-12">
+                            <div class="service-widget">
+                                <div class="post-media wow fadeIn">
+                                    <div class="footer-social">
+                                        <a href="#" class="btn btn-lg grd1"><i class="fa fa-facebook"></i></a>
+                                        <a href="#" class="btn btn-lg grd1"><i class="fa fa-github"></i></a>
+                                        <a href="#" class="btn btn-lg grd1"><i class="fa fa-twitter"></i></a>
+                                        <a href="#" class="btn btn-lg grd1"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- end row -->
     </div>
-    <!-- end container -->
 </div>

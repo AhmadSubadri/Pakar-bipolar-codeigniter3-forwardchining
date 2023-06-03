@@ -18,6 +18,7 @@
                                 <th>Alamat</th>
                                 <th>Periksa</th>
                                 <th>Gejala</th>
+                                <th>Penyakit</th>
                                 <th>Hasil</th>
                                 <th>Aksi</th>
                             </tr>
@@ -30,11 +31,12 @@
                                     <tr>
                                         <td><?= $i++; ?></td>
                                         <td><?= $item->nama; ?><br><?= $item->jenis_kelamin; ?></td>
-                                        <td><?= $item->umur; ?></td>
+                                        <td><?= $item->umur; ?> Tahun</td>
                                         <td><?= $item->alamat; ?></td>
                                         <td><?= $item->waktu; ?></td>
                                         <td><?= $item->jawaban; ?></td>
-                                        <td><?= $item->jawaban; ?></td>
+                                        <td><?= $item->penyakit; ?></td>
+                                        <td><?= $item->persen; ?>%</td>
                                         <td>
                                             <a href="" class="btn btn-sm btn-success m-1">Edit</a>
                                             <a href="" class="btn btn-sm btn-danger m-1">Delete</a>

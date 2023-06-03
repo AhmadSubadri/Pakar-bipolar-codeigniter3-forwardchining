@@ -10,7 +10,7 @@ class Riwayat_model extends CI_Model
 
     public function index()
     {
-        $this->db->select('*')->from('riwayat_jawaban')->join('tb_user', 'tb_user.id = riwayat_jawaban.id_user');
+        $this->db->select('*')->from('riwayat_jawaban')->join('tb_user', 'tb_user.uniq_id = riwayat_jawaban.id_user');
         $query = $this->db->get();
         return $query;
     }

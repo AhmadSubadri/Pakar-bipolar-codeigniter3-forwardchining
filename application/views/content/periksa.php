@@ -1,77 +1,88 @@
 <div id="home" class="parallax wow fadeIn" data-stellar-background-ratio="0.4"></div>
-<div id="service" class="services wow fadeIn">
+<div id="price" class="section pr wow fadeIn" style="background-image:url(<?= base_url('assets/images/price-bg.png') ?>);">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="inner-services">
-                    <div class="rightbox">
-                        <div class="rb-container">
-                            <ul class="rb">
-                                <li class="rb-item active" ng-repeat="itembx">
-                                    <div class="timestamp">
-                                        Tahap 1
-                                    </div>
-                                    <div class="item-title">Lengkapi Biodata Anda untuk riwayat pemeriksaan.</div>
-                                </li>
-                                <li class="rb-item" ng-repeat="itembx">
-                                    <div class="timestamp">
-                                        Rahap 2
-                                    </div>
-                                    <div class="item-title">Pilih gejala yang sedang anda alami.</div>
-                                </li>
-
-                                <li class="rb-item" ng-repeat="itembx">
-                                    <div class="timestamp">
-                                        Tahap 3
-                                    </div>
-                                    <div class="item-title">Hasil pemeriksaan.</div>
-                                </li>
-                            </ul>
-                        </div>
+        <div class="container-fluid py-5 text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="horizontal-timeline">
+                        <ul class="list-inline items">
+                            <li class="list-inline-item items-list">
+                                <div class="px-4">
+                                    <div class="event-date badge bg-primary">Step 1</div>
+                                    <h5 class="pt-2">Lengkapi Biodata</h5>
+                                    <p class="text-muted">Lengkapi Biodata anda sesuai dengan form yang di sediakan.</p>
+                                </div>
+                            </li>
+                            <li class="list-inline-item items-list">
+                                <div class="px-4">
+                                    <div class="event-date badge bg-success">Step 2</div>
+                                    <h5 class="pt-2">Pilih Gejala</h5>
+                                    <p class="text-muted">Pilih geja sesuai dengan apa yang anda alami.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="list-inline-item items-list">
+                                <div class="px-4">
+                                    <div class="event-date badge bg-danger">Step 3</div>
+                                    <h5 class="pt-2">Hasil</h5>
+                                    <p class="text-muted">Hasil ini dari gejala yang anda centang.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
-                <div class="appointment-form">
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-step" data-step="1">
+                <div class="appointment-form step-content" id="step1">
                     <h3><span>+</span> Biodata Periksa</h3>
                     <div class="form">
-                        <form action="">
+                        <form id="stepForm1" method="post">
                             <fieldset>
-
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
                                     <div class="row">
                                         <div class="form-group">
-                                            <input type="text" id="name" name="nama" placeholder="Your Name" />
+                                            <input type="text" name="nama" placeholder="Your Name" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" placeholder="Umur anda" id="umur" name="umur" />
+                                            <input type="number" placeholder="Umur anda" name="umur" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
                                     <div class="row">
                                         <div class="form-group">
-                                            <select class="form-control">
-                                                <option>Laki-Laki</option>
-                                                <option>Perempuan</option>
+                                            <select class="form-control" name="jenis_kelamin">
+                                                <option value="Laki-Laki">Laki-Laki</option>
+                                                <option value="Perempuan">Perempuan</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" placeholder="Nomor Kartu Keluarga" id="kk" name="kk" />
+                                            <input type="number" placeholder="Nomor Kartu Keluarga" name="no_kk" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="row">
                                         <div class="form-group">
-                                            <textarea rows="4" id="textarea_message" class="form-control" placeholder="Alamat anda..."></textarea>
+                                            <input type="number" placeholder="Nomor Telephon" name="telp" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="row">
                                         <div class="form-group">
-                                            <div class="center"><button type="submit">Next</button></div>
+                                            <textarea rows="4" name="alamat" class="form-control" placeholder="Alamat anda..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="center">
+                                                <button type="submit" class="next-button">Next</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -79,12 +90,388 @@
                         </form>
                     </div>
                 </div>
+                <div class="appointment-form step-content" id="step2" style="display: none;">
+                    <h3><span>+</span> Pilih Gejala Yang Anda Alami</h3>
+                    <div class="form">
+                        <form id="stepForm2" method="post">
+                            <fieldset>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                                    <div class="row">
+                                        <?php foreach ($gejala as $gjl) : ?>
+                                            <div class="form-check">
+                                                <input class="form-check-input" name="gejala[]" type="checkbox" value="<?= $gjl->kode_gejala; ?>" id="flexCheckDefault<?= $gjl->kode_gejala; ?>">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    <?= $gjl->gejala; ?>
+                                                </label>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="center">
+                                                <button class="back-button">Kembali</button>
+                                                <button type="submit" class="next-button">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="appointment-form step-content" id="step3" style="display: none;">
+
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var currentStep = 1;
+        var currentDataId; // Menyimpan ID data saat ini
+
+        function showStep(step) {
+            $('.step-content').hide();
+            $('#step' + step).show();
+        }
+
+        function clearData(step) {
+            if (step === 2 && currentDataId) {
+                deleteData(currentDataId); // Hapus data saat langkah kedua
+            }
+        }
+
+        function goBack() {
+            if (currentStep > 1) {
+                clearData(currentStep);
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+
+        function showNextStep() {
+            currentStep++;
+            showStep(currentStep);
+        }
+
+        function deleteData(dataId) {
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url('periksa/delete'); ?>',
+                data: {
+                    dataId: dataId
+                },
+                success: function(response) {
+                    console.log('Data berhasil dihapus');
+                },
+                error: function(xhr, status, error) {
+                    console.log('Gagal menghapus data: ' + error);
+                }
+            });
+        }
+
+        $('.previous-button').click(function() {
+            goBack();
+        });
+
+        $('.next-button').click(function(e) {
+            e.preventDefault();
+
+            var formData = $('#stepForm' + currentStep).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url('periksa/step'); ?>' + currentStep,
+                data: formData,
+                success: function(response) {
+                    if (currentStep === 1) {
+                        currentDataId = response.dataId; // Simpan ID data yang dikembalikan saat langkah pertama
+                    }
+                    if (currentStep === 2) {
+                        showNextStep();
+                        $.ajax({
+                            type: 'POST',
+                            url: '<?= base_url('periksa/step2'); ?>',
+                            data: formData,
+                            success: function(response) {
+                                $('#step3').html(response); // Memperbarui konten pada step 3 dengan hasil inferensi yang dikembalikan
+                            }
+                        });
+                    } else {
+                        showNextStep();
+                    }
+                }
+            });
+        });
+
+        $('.back-button').click(function(e) {
+            e.preventDefault();
+            goBack();
+        });
+    });
+</script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var currentStep = 1;
+        var currentDataId; // Menyimpan ID data saat ini
+
+        function showStep(step) {
+            $('.step-content').hide();
+            $('#step' + step).show();
+        }
+
+        function clearData(step) {
+            if (step === 2 && currentDataId) {
+                deleteData(currentDataId); // Hapus data saat langkah kedua
+            }
+        }
+
+        function goBack() {
+            if (currentStep > 1) {
+                clearData(currentStep);
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+
+        function showNextStep() {
+            currentStep++;
+            showStep(currentStep);
+        }
+
+        function deleteData(dataId) {
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url('periksa/delete'); ?>',
+                data: {
+                    dataId: dataId
+                },
+                success: function(response) {
+                    console.log('Data berhasil dihapus');
+                },
+                error: function(xhr, status, error) {
+                    console.log('Gagal menghapus data: ' + error);
+                }
+            });
+        }
+
+        $('.previous-button').click(function() {
+            goBack();
+        });
+
+        $('.next-button').click(function(e) {
+            e.preventDefault();
+
+            var formData = $('#stepForm' + currentStep).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url('periksa/step'); ?>' + currentStep,
+                data: formData,
+                success: function(response) {
+                    if (currentStep === 1) {
+                        currentDataId = response.dataId; // Simpan ID data yang dikembalikan saat langkah pertama
+                    }
+                    showNextStep();
+
+                    if (currentStep === 2) {
+                        insertTwo(); // Panggil fungsi insert_two() pada langkah kedua
+                    }
+                }
+            });
+        });
+
+        $('.back-button').click(function(e) {
+            e.preventDefault();
+            goBack();
+        });
+    });
+</script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var currentStep = 1;
+        var currentDataId; // Menyimpan ID data saat ini
+
+        function showStep(step) {
+            $('.step-content').hide();
+            $('#step' + step).show();
+        }
+
+        function clearData(step) {
+            if (step === 2 && currentDataId) {
+                deleteData(currentDataId); // Hapus data saat langkah kedua
+            }
+        }
+
+        function goBack() {
+            if (currentStep > 1) {
+                clearData(currentStep);
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+
+        function showNextStep() {
+            currentStep++;
+            showStep(currentStep);
+        }
+
+        function deleteData(dataId) {
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url('periksa/delete'); ?>',
+                data: {
+                    dataId: dataId
+                },
+                success: function(response) {
+                    console.log('Data berhasil dihapus');
+                },
+                error: function(xhr, status, error) {
+                    console.log('Gagal menghapus data: ' + error);
+                }
+            });
+        }
+
+        $('.previous-button').click(function() {
+            goBack();
+        });
+
+        $('.next-button').click(function(e) {
+            e.preventDefault();
+
+            var formData = $('#stepForm' + currentStep).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url('periksa/step'); ?>' + currentStep,
+                data: formData,
+                success: function(response) {
+                    if (currentStep === 1) {
+                        currentDataId = response.dataId; // Simpan ID data yang dikembalikan saat langkah pertama
+                    }
+                    showNextStep();
+                }
+            });
+        });
+
+        $('.back-button').click(function(e) {
+            e.preventDefault();
+            goBack();
+        });
+    });
+</script> -->
+
+<!-- <script>
+    $(document).ready(function() {
+        var currentStep = 1;
+
+        function showStep(step) {
+            $('.step-content').hide();
+            $('#step' + step).show();
+        }
+
+        function clearData(step) {
+            // Tambahkan logika penghapusan data dari database sesuai dengan langkah saat ini
+            if (step === 1) {
+                // Misalnya, hapus data dari database jika langkah saat ini adalah 1
+                $.ajax({
+                    type: 'POST',
+                    url: '<?= site_url('periksa/delete'); ?>',
+                    success: function(response) {
+                        console.log('Data berhasil dihapus');
+                    }
+                });
+            }
+        }
+
+        function goBack() {
+            if (currentStep > 1) {
+                clearData(currentStep);
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+
+        function showNextStep() {
+            clearData(currentStep);
+            currentStep++;
+            showStep(currentStep);
+        }
+
+        $('.previous-button').click(function() {
+            goBack();
+        });
+
+        $('.next-button').click(function(e) {
+            e.preventDefault();
+
+            var formData = $('#stepForm' + currentStep).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= site_url('periksa/step'); ?>' + currentStep,
+                data: formData,
+                success: function(response) {
+                    showNextStep();
+                }
+            });
+        });
+    });
+</script> -->
 <style>
+    .horizontal-timeline .items {
+        border-top: 3px solid #e9ecef;
+    }
+
+    .horizontal-timeline .items .items-list {
+        display: block;
+        position: relative;
+        text-align: center;
+        padding-top: 70px;
+        margin-right: 0;
+    }
+
+    .horizontal-timeline .items .items-list:before {
+        content: "";
+        position: absolute;
+        height: 36px;
+        border-right: 2px dashed #dee2e6;
+        top: 0;
+    }
+
+    .horizontal-timeline .items .items-list .event-date {
+        position: absolute;
+        top: 36px;
+        left: 0;
+        right: 0;
+        width: 75px;
+        margin: 0 auto;
+        font-size: 0.9rem;
+        padding-top: 8px;
+    }
+
+    @media (min-width: 1140px) {
+        .horizontal-timeline .items .items-list {
+            display: inline-block;
+            width: 24%;
+            padding-top: 45px;
+        }
+
+        .horizontal-timeline .items .items-list .event-date {
+            top: -40px;
+        }
+    }
+</style>
+<!-- <style>
+
     @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
     li.active {
@@ -200,4 +587,4 @@
         padding: 5em 5em 1em 1em;
         color: #50d890;
     }
-</style>
+</style> -->

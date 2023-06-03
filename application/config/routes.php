@@ -39,3 +39,7 @@ $route['data-admin/delete/(:any)'] = 'admin/data_admin/delete/$1';
 $route['berita'] = 'Berita';
 $route['contact'] = 'Contact';
 $route['periksa'] = 'Periksa';
+
+$route['periksa/delete'] = 'Periksa/delete';
+$route['periksa/step1'] = 'Periksa/insert_one';
+$route['periksa/step2'] = 'Periksa/insert_two';

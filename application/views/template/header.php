@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- Site Metas -->
-<title>Sistem Pakar Pinilih - </title>
+<title><?php echo SITE_NAME . " - " . ucfirst($this->uri->segment(1)) . " " . ucfirst($this->uri->segment(2)) ?></title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
