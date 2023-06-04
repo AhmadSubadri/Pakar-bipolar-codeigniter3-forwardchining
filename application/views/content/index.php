@@ -128,7 +128,7 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-6 col-xs-12">
                             <div class="service-widget">
-                                <div class="post-media wow fadeIn">
+                                <div class="post-media wow fadeIn text-center">
                                     <div class="footer-social">
                                         <a href="#" class="btn btn-lg grd1"><i class="fa fa-facebook"></i></a>
                                         <a href="#" class="btn btn-lg grd1"><i class="fa fa-github"></i></a>

@@ -7,9 +7,6 @@
                     <div class="mb-3 mb-sm-0">
                         <h5 class="card-title fw-semibold">Data Pasien</h5>
                     </div>
-                    <div>
-                        <a href="" class="btn btn-sm btn-primary m-1"><i class="ti ti-circle-plus"></i> Tambah Data</a>
-                    </div>
                 </div>
                 <div class="table-responsive">
                     <table id="myTable" class="table table-bordered table-striped">

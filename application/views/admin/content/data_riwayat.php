@@ -7,6 +7,9 @@
                     <div class="mb-3 mb-sm-0">
                         <h5 class="card-title fw-semibold">Data Riwayat</h5>
                     </div>
+                    <div>
+                        <a href="<?= site_url('data-rule/insert') ?>" class="btn btn-sm btn-warning m-1"><i class="ti ti-printer"></i> Cetak</a>
+                    </div>
                 </div>
                 <div class="table-responsive">
                     <table id="myTable" class="table table-bordered table-striped">
@@ -36,7 +39,7 @@
                                         <td><?= $item->waktu; ?></td>
                                         <td><?= $item->jawaban; ?></td>
                                         <td><?= $item->penyakit; ?></td>
-                                        <td><?= $item->persen; ?>%</td>
+                                        <td><span class="badge bg-success rounded-3 fw-semibold"><?= $item->persen; ?>%</span></td>
                                         <td>
                                             <a href="" class="btn btn-sm btn-success m-1">Edit</a>
                                             <a href="" class="btn btn-sm btn-danger m-1">Delete</a>

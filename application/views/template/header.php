@@ -104,9 +104,6 @@
                             <li><a class="<?php if ($this->uri->uri_string() == "Contact") {
                                                 echo "active";
                                             } ?>" data-scroll href="<?= base_url('Contact'); ?>">Contact</a></li>
-                            <li><a class="<?php if ($this->uri->uri_string() == "administrator/login") {
-                                                echo "active";
-                                            } ?>" data-scroll href="<?= base_url('administrator/login'); ?>">Login</a></li>
                         </ul>
                     </div>
                 </nav>
