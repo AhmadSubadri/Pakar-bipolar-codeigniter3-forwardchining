@@ -5,7 +5,7 @@
             <div class="card-body">
                 <div class="d-sm-flex d-block align-items-center justify-content-between mb-9 alert alert-success">
                     <div class="mb-3 mb-sm-0">
-                        <h5 class="card-title fw-semibold">Data Gejala Add</h5>
+                        <h5 class="card-title fw-semibold">Data Admin Add</h5>
                     </div>
                 </div>
                 <form action="<?= site_url('data-admin/insert'); ?>" method="post">

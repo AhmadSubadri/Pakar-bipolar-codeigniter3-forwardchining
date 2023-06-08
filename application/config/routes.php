@@ -35,8 +35,14 @@ $route['data-admin/insert'] = 'admin/data_admin/insert';
 $route['data-admin/edit/(:any)'] = 'admin/data_admin/edit/$1';
 $route['data-admin/delete/(:any)'] = 'admin/data_admin/delete/$1';
 
+$route['data-berita'] = 'admin/data_berita';
+$route['data-berita/insert'] = 'admin/data_berita/insert';
+$route['data-berita/edit/(:any)'] = 'admin/data_berita/edit/$1';
+$route['data-berita/delete/(:any)'] = 'admin/data_berita/delete/$1';
+
 
 $route['berita'] = 'Berita';
+$route['detail-berita/(:any)'] = 'Berita/detail_berita/$1';
 $route['contact'] = 'Contact';
 $route['periksa'] = 'Periksa';
 

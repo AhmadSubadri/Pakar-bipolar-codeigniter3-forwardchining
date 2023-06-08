@@ -10,73 +10,53 @@
                 <div class="message-box row">
                     <div class="wow fadeInUp" data-wow-delay="0.3s">
                         <div class="row g-0">
-                            <div class="col-sm-3 text-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url(); ?>assets/images/clinic_01.jpg" height="100%" width="100%">
-                            </div>
-                            <div class="col-md-9">
-                                <a href="">
-                                    <h4>Super and up for the comming model in shoot at newyork USA morning..</h4>
-                                </a>
-                                <p class="small"><i class="fa fa-calendar-o"></i> <?= date('Y-m-d'); ?> <i class="fa fa-user"> </i> Admin pinilih</p>
-                                <p>Welcome to my personal travel blog, i love to travel the globe, i have been to so many beautiful places and met interesting people around the world, this website is my mirror of life <a href="">selengkapnya...</p>
-                            </div>
-                            <hr class="hr1">
-                            <div class="col-sm-3 text-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url(); ?>assets/images/clinic_01.jpg" height="100%" width="100%">
-                            </div>
-                            <div class="col-md-9">
-                                <a href="">
-                                    <h4>Super and up for the comming model in shoot at newyork USA morning..</h4>
-                                </a>
-                                <p class="small"><i class="fa fa-calendar-o"></i> <?= date('Y-m-d'); ?> <i class="fa fa-user"> </i> Admin pinilih</p>
-                                <p>Welcome to my personal travel blog, i love to travel the globe, i have been to so many beautiful places and met interesting people around the world, this website is my mirror of life <a href="">selengkapnya...</p>
-                            </div>
-                            <hr class="hr1">
-                            <div class="col-sm-3 text-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url(); ?>assets/images/clinic_01.jpg" height="100%" width="100%">
-                            </div>
-                            <div class="col-md-9">
-                                <a href="">
-                                    <h4>Super and up for the comming model in shoot at newyork USA morning..</h4>
-                                </a>
-                                <p class="small"><i class="fa fa-calendar-o"></i> <?= date('Y-m-d'); ?> <i class="fa fa-user"> </i> Admin pinilih</p>
-                                <p>Welcome to my personal travel blog, i love to travel the globe, i have been to so many beautiful places and met interesting people around the world, this website is my mirror of life <a href="">selengkapnya...</p>
-                            </div>
-                            <hr class="hr1">
+                            <?php if (!$berita) : ?>
+                                <h1>Berita kosong</h1>
+                            <?php else : ?>
+                                <?php foreach ($berita as $item) : ?>
+                                    <div class="col-sm-3 text-center">
+                                        <img class="img-fluid flex-shrink-0 rounded-circle" src="<?= base_url('assets/images/' . $item->gambar); ?>" height="100%" width="100%">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <a href="<?= site_url('detail-berita/' . $item->slug); ?>">
+                                            <h4><?= $item->judul; ?></h4>
+                                        </a>
+                                        <p class="small"><i class="fa fa-calendar-o"></i> <?= $item->date; ?> <i class="fa fa-user"> </i> <?= $item->pembuat; ?></p>
+                                        <p><?= word_limiter($item->konten, 10); ?> <a href="<?= site_url('detail-berita/' . $item->slug); ?>">selengkapnya...</a></p>
+                                    </div>
+                                    <!-- <hr class="hr1"> -->
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
+                    </div>
+                    <div class="pagination">
+                        <?php echo $this->pagination->create_links(); ?>
                     </div>
                 </div>
                 <hr class="hr1">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="service-widget">
-                            <div class="post-media wow fadeIn">
-                                <a href="<?= base_url(); ?>assets/images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                <img src="<?= base_url(); ?>assets/images/clinic_01.jpg" alt="" class="img-responsive">
-                            </div>
-                            <h3>Digital Control Center</h3>
-                        </div>
+                    <div class="heading">
+                        <h2>Artikel Terkait</h2>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="service-widget">
-                            <div class="post-media wow fadeIn">
-                                <a href="<?= base_url(); ?>assets/images/clinic_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                <img src="<?= base_url(); ?>assets/images/clinic_02.jpg" alt="" class="img-responsive">
+                    <?php if (!$child) : ?>
+                        <h1>Berita kosong</h1>
+                    <?php else : ?>
+                        <?php foreach ($child as $item) : ?>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="service-widget">
+                                    <div class="post-media wow fadeIn">
+                                        <a href="<?= base_url('assets/images/' . $item->gambar); ?>" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                        <img src="<?= base_url('assets/images/' . $item->gambar); ?>" alt="" class="img-responsive">
+                                    </div>
+                                    <h3>
+                                        <a href="<?= site_url('detail-berita/' . $item->slug); ?>">
+                                            <?= $item->judul; ?>
+                                        </a>
+                                    </h3>
+                                </div>
                             </div>
-                            <h3>Hygienic Operating Room</h3>
-                        </div>
-                        <!-- end service -->
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="service-widget">
-                            <div class="post-media wow fadeIn">
-                                <a href="<?= base_url(); ?>assets/images/clinic_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                <img src="<?= base_url(); ?>assets/images/clinic_03.jpg" alt="" class="img-responsive">
-                            </div>
-                            <h3>Specialist Physicians</h3>
-                        </div>
-                        <!-- end service -->
-                    </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </div>
             <!-- end col -->
@@ -89,40 +69,26 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
                 <div class="appointment-form">
                     <h3 class="text-center"><span>+</span> Galeri</h3>
                     <div class="row">
                         <hr class="hr1">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="<?= base_url(); ?>assets/images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="<?= base_url(); ?>assets/images/clinic_01.jpg" alt="" class="img-responsive">
+                        <?php if (!$galeri) : ?>
+                            <h1>Berita kosong</h1>
+                        <?php else : ?>
+                            <?php foreach ($galeri as $item) : ?>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="service-widget">
+                                        <div class="post-media wow fadeIn">
+                                            <a href="<?= base_url('assets/images/' . $item->gambar); ?>" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                                            <img src="<?= base_url('assets/images/' . $item->gambar); ?>" alt="" class="img-responsive">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="<?= base_url(); ?>assets/images/clinic_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="<?= base_url(); ?>assets/images/clinic_02.jpg" alt="" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="<?= base_url(); ?>assets/images/clinic_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="<?= base_url(); ?>assets/images/clinic_03.jpg" alt="" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
                 <div class="appointment-form">
                     <h3 class="text-center"><span>+</span> Media Sosial</h3>
                     <div class="row">

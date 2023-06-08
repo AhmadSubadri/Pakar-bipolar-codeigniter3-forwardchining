@@ -82,6 +82,14 @@
                         <span class="hide-menu">User</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="<?= site_url('data-berita') ?>" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-globe"></i>
+                        </span>
+                        <span class="hide-menu">Berita</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
