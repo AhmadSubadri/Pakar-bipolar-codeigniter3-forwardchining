@@ -31,6 +31,9 @@
                                 </div>
                             </div>
                         </form>
+                        <script type="text/javascript" src="https://free-hit-counters.net/count/cljn"></script><br>
+                        <a href='https://www.versicherungen.at/'></a>
+                        <script type='text/javascript' src='https://www.whomania.com/ctr?id=953bd96b238eea331cbfc68a0f8e300275a23151'></script>
                     </div>
                 </div>
             </div>
