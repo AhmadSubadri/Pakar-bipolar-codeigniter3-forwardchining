@@ -1,5 +1,5 @@
 <div id="home" class="parallax wow fadeIn" data-stellar-background-ratio="0.4"></div>
-<div id="about" class="section wow fadeIn">
+<div id="about" class="wow fadeIn">
     <div class="container">
         <div class="row">
             <div class="col-md-8">

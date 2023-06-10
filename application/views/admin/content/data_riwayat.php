@@ -41,8 +41,7 @@
                                         <td><?= $item->penyakit; ?></td>
                                         <td><span class="badge bg-success rounded-3 fw-semibold"><?= $item->persen; ?>%</span></td>
                                         <td>
-                                            <a href="" class="btn btn-sm btn-success m-1">Edit</a>
-                                            <a href="" class="btn btn-sm btn-danger m-1">Delete</a>
+                                            <a href="<?= site_url('data-riwayat/delete/' . $item->uniq_id) ?>" class="btn btn-sm btn-danger m-1">Delete</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

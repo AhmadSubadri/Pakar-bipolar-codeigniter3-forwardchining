@@ -14,4 +14,9 @@ class Riwayat_model extends CI_Model
         $query = $this->db->get();
         return $query;
     }
+
+    function delete_by_uniq_id($uniq)
+    {
+        return $this->db->delete('tb_user', ['uniq_id' => $uniq]);
+    }
 }

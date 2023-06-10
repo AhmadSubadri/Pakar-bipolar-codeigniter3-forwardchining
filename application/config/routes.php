@@ -28,7 +28,11 @@ $route['data-rule/edit/(:any)'] = 'admin/data_rule/edit/$1';
 $route['data-rule/delete/(:any)'] = 'admin/data_rule/delete/$1';
 
 $route['data-riwayat'] = 'admin/data_riwayat';
+$route['data-riwayat/delete/(:any)'] = 'admin/data_riwayat/delete/$1';
+
 $route['data-pasien'] = 'admin/data_pasien';
+$route['data-pasien/edit/(:any)'] = 'admin/data_pasien/edit/$1';
+$route['data-pasien/delete/(:any)'] = 'admin/data_pasien/delete/$1';
 
 $route['data-admin'] = 'admin/data_admin';
 $route['data-admin/insert'] = 'admin/data_admin/insert';
