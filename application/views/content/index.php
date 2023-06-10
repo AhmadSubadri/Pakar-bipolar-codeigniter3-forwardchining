@@ -1,8 +1,16 @@
 <div id="home" class="parallax wow fadeIn" data-stellar-background-ratio="0.4"></div>
-<div id="about" class="section wow fadeIn">
+<div id="about" class="wow fadeIn">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="card-text">Selamat datang di sistem pakar<br>diagnosa penyakit bipolar Argodadi!</h2>
+                    </div>
+                    <div class="card-image">
+                        <img src="<?= base_url(); ?>assets/images/about_03.jpg" alt="Gambar" width="200" height="100" />
+                    </div>
+                </div><br>
                 <div class="heading">
                     <span class="icon-logo"><img src="<?= base_url(); ?>assets/images/icon-logo.png" alt="#"></span>
                     <h2>Artikel Terkini</h2>
@@ -110,3 +118,51 @@
         </div>
     </div>
 </div>
+<style>
+    .card {
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        overflow: hidden;
+        height: 200px;
+        padding: 10px;
+        box-shadow: 2px 2px 2px 2px;
+    }
+
+    .card-content {
+        flex: 1;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-text {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .card-image {
+        position: relative;
+        width: 30%;
+        height: 100%;
+    }
+
+    .wave {
+        fill: #f2f2f2;
+    }
+
+    .wave-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
